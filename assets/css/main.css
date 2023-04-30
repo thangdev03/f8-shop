@@ -69,8 +69,148 @@
 }
 
 .header__navbar-title--no-pointer {
-    cursor: text;
     color: white;
+    cursor: text;
 }
 
 /* Header QR Code */
+.header__qr {
+    width: 186px;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: white;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.2s;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-apps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qr-download-link {
+
+}
+
+.header__qr-download-link:first-child {
+    margin-left: 11px;
+}
+
+.header__qr-download-link:nth-child(2) {
+    margin-right: 11px;
+}
+
+.header__qr-download-img {
+    height: 16px;
+}
+
+.header__navbar-item--has-qr:hover .header__qr {
+    display: block;
+}
+
+.header__qr::before {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    top: -16px;
+    left: 0; 
+}
+
+/* Header Notification */
+.header__notify {
+    position: absolute;
+    top: 150%;
+    right: 0;
+    width: 404px;
+    background-color: white;
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+    cursor: default;
+}
+
+.header__notify-header {
+    height: 40px;
+    background-color: white;
+}
+
+.header__notify-header h3 {
+    color: #999;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.header__notify-list {
+    padding: 0;
+    list-style: none;
+}
+
+.header__notify-item {
+
+}
+
+.header__notify-item--viewed {
+    background-color: rgba(238, 77, 45, 0.09);
+}
+
+.header__notify-item:hover,
+.header__notify-footer:hover .header__notify-footer-btn {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.header__notify-link {
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__notify-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-info {
+    margin-left: 12px;
+}
+
+.header__notify-title {
+    display: block;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.header__notify-description {
+    display: block;
+    margin-top: 4px;
+    color: #555;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.header__notify-footer {
+    text-align: center;
+}
+
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 16px;
+    display: block;
+    font-weight: 400;
+    font-size: 1.4rem;
+}

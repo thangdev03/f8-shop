@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F8 Shopee</title>
+    <title>F8 Shopee Clone</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -19,9 +19,22 @@
             <div class="grid">
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item header__navbar-item--separate">Vào cửa hàng trên ứng dụng Shopee</li>
+                        <li class="header__navbar-item header__navbar-item--separate header__navbar-item--has-qr">
+                            Vào cửa hàng trên ứng dụng Shopee
+                            <div class="header__qr">
+                                <img class="header__qr-img" src="./assets/img/qr-code-download.png" alt="QR Code">
+                                <div class="header__qr-apps">
+                                    <a class="header__qr-download-link" href="#">
+                                        <img class="header__qr-download-img" src="./assets/img/google-play.png" alt="Google Play">
+                                    </a>
+                                    <a class="header__qr-download-link" href="#">
+                                        <img class="header__qr-download-img" src="./assets/img/appstore.png" alt="Google Play">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
                         <li class="header__navbar-item">
-                            <span class="header__navbar-title--no-pointer">Kết nối</span>
+                            <span class="header__navbar-title--no-pointer no-user-select">Kết nối</span>
                             <a href="" class="header__navbar-icon-link">
                                 <i class="header__navbar-icon fa-brands fa-facebook"></i>
                             </a>
@@ -34,12 +47,60 @@
                         <li class="header__navbar-item">
                             <a href="#" class="header__navbar-item-link">
                                 <i class="header__navbar-icon fa-regular fa-bell"></i>
-                                Thông báo</a>
+                                Thông báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://cdn.abphotos.link/photos/resized/1000x/83-1580794352-myphamohui-lgvina.png" alt="Mỹ phẩm OHUI" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-title">Mỹ phẩm OHUI chính hãng</span>
+                                                <span class="header__notify-description">Xác thực chính hãng các sản phẩm OHUI</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://muahohanquoc.com/wp-content/uploads/2021/06/4050_8801051410532-1-e1623554149918.jpg" alt="Set 5 mỹ phẩm OHUI" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-title">Mỹ phẩm OHUI SALE OFF 50% nhân dịp lễ 30/4 - 1/5, vì sắc đẹp phụ nữ Việt Nam</span>
+                                                <span class="header__notify-description">Giá chỉ còn: 1.950.000 (Giá gốc: 3.900.000)</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://bucket.nhanh.vn/e688ad-97439/ps/20210731_ISbYRHsRDFk6lv2QxYS1n90E.jpg" alt="Son MAC MATTE 3G" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-title">Mỹ phẩm MAC ra mắt sản phẩm mới</span>
+                                                <span class="header__notify-description">Son MAC MATTE LIPSTICKS 3G - DEVOTED TO CHILI (316) là dòng sản phẩm mới nhất đến từ nhà MAC</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://magiamgiashopee.vn/wp-content/uploads/2020/02/G%C3%B3i-mi%E1%BB%85n-ph%C3%AD-v%E1%BA%ADn-chuy%E1%BB%83n-Freeship-Extra-Shopee.png" alt="Xtra Freeship" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-title">Săn DEAL 5/5, trúng lớn quà to, mua thả ga</span>
+                                                <span class="header__notify-description">Tặng mã XTra Freeship đối với tất cả mặt hàng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="header__notify-footer">
+                                    <a class="header__notify-footer-btn" href="#">Xem tất cả</a>
+                                </div>
+                            </div>
                         </li>
                         <li class="header__navbar-item">
                             <a href="#" class="header__navbar-item-link">
                                 <i class="header__navbar-icon fa-regular fa-circle-question"></i>
-                                Trợ giúp</a>
+                                Trợ giúp
+                            </a>
                         </li>
                         <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
                         <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
