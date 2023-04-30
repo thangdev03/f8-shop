@@ -58,6 +58,10 @@
     transform: translateY(-50%);
 }
 
+.header__navbar-item--has-noti:hover .header__notify {
+    display: block;
+}
+
 .header__navbar-icon-link {
     color: white;
     text-decoration: none;
@@ -135,6 +139,20 @@
     border: 1px solid #d3d3d3;
     border-radius: 2px;
     cursor: default;
+    transform-origin: calc(100% - 20px) top;
+    animation: growIn ease-in 0.25s;
+    display: none;
+}
+
+@keyframes growIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .header__notify-header {
