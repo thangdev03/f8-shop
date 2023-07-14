@@ -136,6 +136,7 @@
     position: absolute;
     top: 150%;
     right: 0;
+    z-index: 10;
     width: 404px;
     background-color: white;
     border: 1px solid #d3d3d3;
@@ -435,15 +436,67 @@
     color: white;
 }
 
+.header__search-input-wrap {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
 .header__search-input {
     height: 100%;
-    flex: 1;
+    width: 100%;
     color: var(--text-color);
     font-size: 1.4rem;
     border: none;
     outline: none;
     padding: 0 16px;
-    border-radius: 3px;
+    border-radius: 2px;
+}
+
+.header__search-input:focus ~ .header__search-history {
+    display: block;
+}
+
+.header__search-history {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: calc(100% - 16px);
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0 1px 4px #b6b6b6;
+    overflow: hidden;
+    display: none;
+}
+
+.header__search-history-heading {
+    margin: 12px 12px 8px;    
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #adadad;
+}
+
+.header__search-history-list {
+    padding-left: 0;
+    list-style: none;
+    margin: 8px 0 0;
+}
+
+.header__search-history-item {
+    height: 38px;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+.header__search-history-item:hover {
+    background-color: #f9f9f9;
+}
+
+.header__search-history-item a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    display: block; /*Làm thẻ a chiếm toàn bộ chiều ngang*/
 }
 
 .header__search-select {
@@ -478,7 +531,7 @@
     height: 34px;
     width: 60px;
     margin-right: 3px;
-    border-radius: 3px;
+    border-radius: 2px;
     background-color: var(--primary-color);
     outline: none;
     cursor: pointer;
@@ -497,12 +550,13 @@
     position: absolute;
     right: 0;
     top: 110%;
+    z-index: 10;
     list-style: none;
     width: 120px;
     padding: 0;
     box-shadow: 0 1px 2px #e0e0e0;
     display: none;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 .header__search-option::after {
@@ -520,13 +574,13 @@
 }
 
 .header__search-option-item:first-child {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 
 .header__search-option-item:last-child {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
 .header__search-option-item:hover {
